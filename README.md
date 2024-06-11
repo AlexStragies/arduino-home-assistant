@@ -4,6 +4,17 @@
 [![](https://img.shields.io/badge/Browse_Documentation-40BC13)](https://dawidchyrzynski.github.io/arduino-home-assistant/)
 [![](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/dawidchyrzynski)
 
+Reasons for this Fork:
+
+* Develop a HAText Component, and a corresponding HACharArr data type, analogous to the existing HANumber/HANumeric.
+* Add a Serial Mode. where MQTT messages are not sent via Ethernet/, but via Serial/USB.
+
+The second feature reduces resource usage considerably, by offloading the Network/MQTT complexity to the USB-Host/Serial-Peer. This enables adding a lot more functionality to the Arduino device before running out of space/RAM.
+
+The offloading peer just needs to run a thin wrapper around e.g. socat/mosquitto_{p,s}ub.
+
+I have a mostly working prototype of both features, that I'm in the process of cleaning up for upload.
+
 ArduinoHA allows to integrate an Arduino/ESP based device with Home Assistant using MQTT.
 The library is designed to use as low resources (RAM/flash) as possible.
 Initially, it was optimized to work on Arduino Uno with Ethernet Shield,
