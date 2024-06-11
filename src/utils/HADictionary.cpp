@@ -14,6 +14,7 @@ const char HAComponentSelect[] PROGMEM = {"select"};
 const char HAComponentSensor[] PROGMEM = {"sensor"};
 const char HAComponentSwitch[] PROGMEM = {"switch"};
 const char HAComponentTag[] PROGMEM = {"tag"};
+const char HAComponentText[] PROGMEM = {"text"};
 const char HAComponentScene[] PROGMEM = {"scene"};
 const char HAComponentFan[] PROGMEM = {"fan"};
 const char HAComponentLight[] PROGMEM = {"light"};
